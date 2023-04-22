@@ -142,7 +142,7 @@ $ source devel/setup.bash
 
 ```bash
 $ cd ~/Desktop
-$ git clone https://github.com/hyKangHGU/industrial_AI_automation_HGU.git
+$ git clone https://github.com/hyKangHGU/Industrial-AI-Automation_HGU.git
 ```
 
 rg2_description is from https://github.com/ekorudiawan/rg2_simulation
