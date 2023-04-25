@@ -3,7 +3,7 @@
 
 
 - install Ubuntu 20.04 : [link](/tutorial/)
-- Install utility programs : [link](/tutorial/for_util.md)
+- Install utility programs : [link](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/for%20util.md)
 
 
 
@@ -191,7 +191,7 @@ $
 
 ### Real world
 
-- **Hardware Connection** : [link](/tutorial/UR5e Hardware Setting.md)
+- **Hardware Connection** : [link](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/UR5e%20Hardware%20Setting.md)
 
 
 
