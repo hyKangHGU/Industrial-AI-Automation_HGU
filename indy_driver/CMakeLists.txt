@@ -210,8 +210,8 @@ target_link_libraries(IndyRobot_driver
   industrial_robot_client
 )
 
-add_executable(video src/video.cpp)
-target_link_libraries(video ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+# add_executable(video src/video.cpp)
+# target_link_libraries(video ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 add_executable(IndyRobot src/IndyRobot.cpp)
 add_dependencies(IndyRobot  ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
