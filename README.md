@@ -12,7 +12,7 @@
 
 
 
-### [Utility Programs](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/install-utility-program.md)
+### [Utility Programs](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/install-utility-programs.md)
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-### [ROS Packages for Robot]()
+### [ROS Packages for Robot](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/install-ros-packages-for-robot.md)
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-### 1. [Ubuntu 기본]()
+### 1. [Ubuntu 기본](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ubuntu.md)
 
 
 
@@ -42,21 +42,21 @@
 
 
 
-### 3. [Rviz & Moveit]()
+### 3. Rviz & Moveit
 
 
 
 ### 4. Manipulator Control
 
-- [Indy10]()
-- [ur5e]()
+- Indy10
+- ur5e
 
 
 
 ### 5. Pick & Place with Camera
 
-- [Indy10]()
-- [ur5e]()
+- Indy10
+- ur5e
 
 
 
@@ -64,16 +64,15 @@
 
 
 
-- [한/영 키 설정]()
+- [한/영 키 설정](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/trouble-hangeul-key.md)
 
 
 
-- [윈도우 시간 설정]()
+- 윈도우 시간 설정
 
 
 
 - 
-
 
 
 
