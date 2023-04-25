@@ -1,4 +1,4 @@
-# for util
+# Guidelines for students
 
 
 
