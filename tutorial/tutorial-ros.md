@@ -1,6 +1,14 @@
 # ROS Tutorial
 
-### Talker & Listener
+
+
+Node, Topic, msgs (type) -> 검색
+
+publish/subscribe
+
+
+
+## Talker & Listener
 
 - Tutorial 폴더 접근하기
 
@@ -29,7 +37,7 @@
 
 
 
-### Turtlesim
+## Turtlesim
 
 - Ros master 
 

@@ -1,4 +1,4 @@
-# Ubuntu 듀얼부팅 설치하기
+# Ubuntu 설치하기 (듀얼부팅)
 
 - 참고자료
   - [ROS 개발환경 구축 - YouTube](https://youtu.be/x7tpah6Tiqw)
@@ -16,10 +16,6 @@
 - [ubuntu 20.04.6 LTS](https://releases.ubuntu.com/focal/)
 
 ![ubuntu-20.04.6 disk image](https://user-images.githubusercontent.com/91526930/233799641-5a7e2ec0-93f8-427f-a42c-3a3e7925e8f4.png)
-
-- [ubuntu 18.04.6 LTS](https://releases.ubuntu.com/18.04/)
-
-![ubuntu-18.04.6 disk image](https://user-images.githubusercontent.com/91526930/233799721-db3e1d5c-26b4-4a83-b18b-277f4c978223.png)
 
 
 
