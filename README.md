@@ -1,7 +1,5 @@
 # Industrial AI & Automation
 
-This tutorial is ~~~
-
 
 
 - install Ubuntu 20.04 : [link]()
@@ -147,7 +145,7 @@ $ git clone https://github.com/hyKangHGU/Industrial-AI-Automation_HGU.git
 
 rg2_description is from https://github.com/ekorudiawan/rg2_simulation
 
-copy & paste packages `rg2_description`, `ur5_rg2_moveit_config` and `ur_python` in `~/catkin_ws/src`
+copy & paste packages `indy10_control`, `indy10_description`, `indy10_gazebo`, `indy10_moveit_config`, `indy_driver`, `indy_utils`,  `rg2_description`, `ur5_rg2_moveit_config` and `ur_python` in `~/catkin_ws/src`
 
 ```bash
 $ cd ~/catkin_ws
@@ -161,13 +159,43 @@ $ source devel/setup.bash
 
 
 
+## Indy Robot Execution
+
+#### Simulation
+
+```bash
+$ roslaunch indy10_gazebo indy10_moveit_gazebo.launch
+$ rosrun indy_driver demo.py
+```
+
+
+
+### Real world
+
+```bash
+$ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.6
+$ rosrun indy_driver Robot_Contol.py
+```
+
+
+
 ## UR5e Execution
 
-### Hardware Connection
+### Simulation
+
+```bash
+$ 
+```
 
 
 
-### Software Connection
+### Real world
+
+- **Hardware Connection** : [link]()
+
+
+
+- **Software Connection**
 
 ```bash
 $ roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
@@ -175,11 +203,14 @@ $ roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 
 
 
-### Teaching Pendant
+- **Teaching Pendant**
+  - 로봇프로그램 실행
+
+![image](https://user-images.githubusercontent.com/91526930/234138529-75eb185e-f308-400f-aebb-d2f79e8b3ffb.png)
 
 
 
-### Moveit
+- **Moveit**
 
 ```bash
 $ roslaunch ur5e_rg2_moveit_config move_group.launch
@@ -187,7 +218,7 @@ $ roslaunch ur5e_rg2_moveit_config move_group.launch
 
 
 
-### Demo (python file)
+- **Demo (python file)**
 
 ```bash
 $ rosrun ur_python move_demo.py
