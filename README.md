@@ -45,3 +45,11 @@
 ### 4. Robot Pick & Place with Camera Tutorial
 
 
+
+## Trouble Shooting
+
+
+
+
+
+
