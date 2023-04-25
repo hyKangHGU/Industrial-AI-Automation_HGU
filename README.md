@@ -2,8 +2,8 @@
 
 
 
-- install Ubuntu 20.04 : [link]()
-- Install utility programs : [link]()
+- install Ubuntu 20.04 : [link](/tutorial/)
+- Install utility programs : [link](/tutorial/for_util.md)
 
 
 
@@ -191,7 +191,7 @@ $
 
 ### Real world
 
-- **Hardware Connection** : [link]()
+- **Hardware Connection** : [link](/tutorial/UR5e Hardware Setting.md)
 
 
 
@@ -206,7 +206,7 @@ $ roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 - **Teaching Pendant**
   - 로봇프로그램 실행
 
-![image](https://user-images.githubusercontent.com/91526930/234138529-75eb185e-f308-400f-aebb-d2f79e8b3ffb.png)
+<img src="https://user-images.githubusercontent.com/91526930/234138529-75eb185e-f308-400f-aebb-d2f79e8b3ffb.png" alt="image" style="zoom:50%;" />
 
 
 
