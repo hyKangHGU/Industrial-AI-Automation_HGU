@@ -34,15 +34,20 @@
 
 
 
-### 1. [Ubuntu 기본](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ubuntu.md)
+### 1. Ubuntu 기본
 
+- [기본 명령어](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ubuntu-basic-command.md)
 
+### 2. ROS 기본
 
-### 2. [ROS 기본](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ros.md)
+- [talker & listener (노드와 메세지 통신 개념 이해하기)](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ros-talker-listener.md)
 
+- [turtlesim 예제](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ros-turtlesim.md)
+- [ROS build system](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ros-build-system.md)
+- [패키지 설치와 복사](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ros-package.md)
+- [카메라 연결 및 실행](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-ros-camera.md)
 
-
-### 3. Rviz & Moveit
+### 3. Simulation
 
 
 

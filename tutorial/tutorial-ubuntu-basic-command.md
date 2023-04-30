@@ -1,8 +1,4 @@
-# Ubuntu Tutorial
-
-
-
-## Basic Command
+# Ubuntu - Basic Command
 
 - man
 
