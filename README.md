@@ -49,7 +49,8 @@
 
 ### 3. Simulation
 
-
+- [moveit](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-simulation-moveit.md)
+- 
 
 ### 4. Manipulator Control
 
@@ -67,17 +68,11 @@
 
 ## Trouble Shooting
 
-
-
 - [한/영 키 설정](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/trouble-hangeul-key.md)
-
-
 
 - 윈도우 시간 설정
 
 
-
-- 
 
 
 

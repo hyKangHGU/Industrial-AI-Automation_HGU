@@ -426,11 +426,9 @@ int main(int argc, char **argv){
 
   ```xml
   <build_depend>message_generation</build_depend>
-  	<!--<run_depend>message_runtime</run_depend>-->
-  	<!--빌드 시 <exec_depend>가 에러 난다면 <run_depend>로-->
   <exec_depend>message_runtime</exec_depend>
   ```
-
+  
   
 
 - `CMakeList.txt` 파일의 내용을 다음과 같이 수정.
@@ -476,9 +474,17 @@ int main(int argc, char **argv){
   target_link_libraries(talker_cpp
     ${catkin_LIBRARIES}
   )
+  add_dependencies(talker_cpp
+    ${${PROJECT_NAME}_EXPORTED_TARGETS}
+    ${catkin_EXPORTED_TARGETS}
+  )
   add_executable(listener_cpp src/listener_cpp.cpp)
   target_link_libraries(listener_cpp
     ${catkin_LIBRARIES}
+  )
+  add_dependencies(listener_cpp
+    ${${PROJECT_NAME}_EXPORTED_TARGETS}
+    ${catkin_EXPORTED_TARGETS}
   )
   ```
 
