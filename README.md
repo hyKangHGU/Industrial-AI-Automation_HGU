@@ -56,7 +56,7 @@
 ### 4. Robot Execution
 
 - [Indy10](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/robot-execution-indy10.md)
-- UR5e
+- [UR5e](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/robot-execution-ur5e.md)
 
 
 

@@ -9,7 +9,32 @@ project(ur_python)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  message_generation
   std_msgs
+  message_runtime
+  moveit_ros_planning
+  moveit_ros_planning_interface
+  moveit_visual_tools
+  geometry_msgs
+  image_transport
+  cv_bridge
+  sensor_msgs
+)
+
+find_package (OpenCV REQUIRED)
+
+add_message_files(
+  FILES
+  object_info.msg
+  robot_state.msg
+  grip_command.msg
+  grip_state.msg
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,6 +131,12 @@ catkin_package(
 #  LIBRARIES ur_python
 #  CATKIN_DEPENDS rospy std_msgs
 #  DEPENDS system_lib
+    LIBRARIES opencv
+    CATKIN_DEPENDS 
+    cv_bridge 
+		image_transport
+    sensor_msgs 
+		std_msgs
 )
 
 ###########
@@ -117,6 +148,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
