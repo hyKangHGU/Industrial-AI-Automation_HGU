@@ -27,8 +27,7 @@
 
   <!-- for 6-dof robots -->
   <group unless="$(arg robot_redundancy)">
-    <node pkg="indy_driver" type="IndyRobot_driver" name="IndyRobot_driver" output="screen"/>
-    <node pkg="indy_driver" type="IndyRobot" name="IndyRobot" output="screen"/>
+    <node pkg="indy_driver" type="indy_socket_driver" name="indy_socket_driver" output="screen"/>
   </group>
   
   <!-- joint_trajectory_action: provides actionlib interface for high-level robot control -->

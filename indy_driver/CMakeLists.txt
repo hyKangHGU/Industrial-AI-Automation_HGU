@@ -30,11 +30,10 @@ find_package (OpenCV REQUIRED)
 
 add_message_files(
   FILES
-  TargetPose.msg
-  IndyRobotState.msg
-  GripState.msg
-  GripCommand.msg
-  ObjectInfo.msg
+  object_info.msg
+  robot_state.msg
+  grip_command.msg
+  grip_state.msg
 )
 
 generate_messages(
@@ -138,9 +137,9 @@ catkin_package(
    # INCLUDE_DIRS include
 #  LIBRARIES indy_driver
    #INCLUDE_DIRS include
-   LIBRARIES opencv
-   CATKIN_DEPENDS 
-   		roscpp
+    LIBRARIES opencv
+    CATKIN_DEPENDS 
+   	roscpp
 		industrial_robot_client
 		cv_bridge 
 		image_transport 
@@ -197,25 +196,17 @@ include_directories(
 
 add_subdirectory(src/SocketHandler)
 
-
-
-add_executable(IndyRobot_driver 
-  src/IndyRobot_driver.cpp 
+add_executable(indy_socket_driver 
+  src/indy_socket_driver.cpp 
   src/TrajectoryDownloader/JointTrajectoryDownloader.cpp
 )
-add_dependencies(IndyRobot_driver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(IndyRobot_driver 
+add_dependencies(indy_socket_driver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(indy_socket_driver 
   ${catkin_LIBRARIES}
   IndyDCPSocket
   industrial_robot_client
 )
 
-# add_executable(video src/video.cpp)
-# target_link_libraries(video ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
-
-add_executable(IndyRobot src/IndyRobot.cpp)
-add_dependencies(IndyRobot  ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(IndyRobot ${catkin_LIBRARIES})
 
 #############
 ## Install ##
