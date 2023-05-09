@@ -1,31 +1,4 @@
-# ROS Build System
-
-아래의 실습 과정은,
-
--  python과 c++ 두가지 버전 모두 다루고 있음.
-- reference: [ROS의 빌드시스템](https://velog.io/@717lumos/ROS-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B9%8C%EB%93%9C%EC%99%80-%EB%85%B8%EB%93%9C-%EC%9E%91%EC%84%B1) 자료를 참고하여 재구성하였음. 
-
-
-
-- ros 빌드시스템에 대한 기본적인 개념
-  - ros 빌드 시스템
-  - 패키지
-    - 패키지 설정 파일
-    - 빌드 설정 파일 (python에 필요한 구성 - 현재 구성되어 있는 목록 틀을 갖추어서 제공할 것.)
-    - src 스크립트
-    - include 헤더 폴더
-- 실습1 rospy
-- 실습2 roscpp
-
-
-
-## ROS의 빌드 시스템
-
-- **Catkin**은 ROS의 빌드 시스템이다.
-- **CMake(Cross Platform Make)**를 기본적으로 이용.
-- `CMakeList.txt`라는 파일에 빌드 환경을 기술해야 함.
-
-정리: CMake를 이용하여, ROS 환경에 알맞게 Catkin 빌드 시스템을 만들었으며, ROS 관련 빌드, 패키지 관리, 패키지 간 의존성 등을 편리하게 사용할 수 있게 되었다. 
+# ROS Build System - rospy
 
 
 

@@ -49,20 +49,18 @@
 
 ### 3. Simulation
 
-- [moveit](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/tutorial-simulation-moveit.md)
-- 
+- [Indy10](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/simulation-indy10.md)
 
-### 4. Manipulator Control
+- UR5e
 
-- Indy10
-- ur5e
+### 4. Robot Operation
+
+- [Indy10](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU/blob/main/tutorial/execution-indy10.md)
+- UR5e
 
 
 
-### 5. Pick & Place with Camera
-
-- Indy10
-- ur5e
+## Source Program Description
 
 
 
