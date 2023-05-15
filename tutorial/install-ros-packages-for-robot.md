@@ -16,7 +16,7 @@ $ sudo apt-get install ros-noetic-universal-robots
 $ cd ~/catkin_ws/src
 
 # retrieve the sources
-$ git clone https://github.com/ros-industrial/universal_robot.git
+$ git clone -b melodic-devel https://github.com/ros-industrial/universal_robot.git
 
 $ cd ~/catkin_ws
 

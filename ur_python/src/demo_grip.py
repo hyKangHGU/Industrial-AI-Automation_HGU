@@ -10,7 +10,7 @@ def main():
         ur5e = MoveGroupPythonInterface()
 
         input("============ Press `Enter` to execute a movement using a joint state goal ...")
-        target_joints = [0, 0, tau/4, 0, tau/4, 0]          # tau = 2 * pi
+        target_joints = [-tau/4, -tau/4, -tau/4, -tau/4, tau/4, 0.0]          # tau = 2 * pi
         indy10_interface.go_to_joint_state(target_joints)
 
         input("============ Press `Enter` to grip on ...")

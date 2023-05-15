@@ -7,11 +7,16 @@ import moveit_msgs
 import geometry_msgs
 
 import tf
+import copy
+
 
 from tf.transformations import *
 from geometry_msgs.msg import Quaternion
+from moveit_commander.conversions import pose_to_list
+from math import pi, tau, dist, fabs, cos
 
 from ur_msgs.srv import SetIO, SetIORequest
+from ur_python.msg import robot_state
 
 def all_close(goal, actual, tolerance):
     """
@@ -45,7 +50,7 @@ def all_close(goal, actual, tolerance):
 class MoveGroupPythonInterface(object):
     """MoveGroupPythonInterface"""
 
-    def __init__(self):
+    def __init__(self, real="real", gripper="gripper"):
         super(MoveGroupPythonInterface, self).__init__()
 
         moveit_commander.roscpp_initialize(sys.argv)
@@ -59,31 +64,36 @@ class MoveGroupPythonInterface(object):
         self.group_name = "manipulator"
         self.manipulator = moveit_commander.move_group.MoveGroupCommander(self.group_name)
 
-        self.io_handler = rospy.ServiceProxy('/ur_hardware_interface/set_io', SetIO)
-        self.gripper = SetIORequest()
-        self.gripper_init()
+        if real == "real":
+            self.io_handler = rospy.ServiceProxy('/ur_hardware_interface/set_io', SetIO)
+            self.gripper = SetIORequest()
+            self.gripper_init()
 
-        # self.planning_frame = self.manipulator.get_planning_frame()
-        # print("============ Planning frame: %s" % self.planning_frame)
+        self.planning_frame = self.manipulator.get_planning_frame()
+        print("============ Planning frame: %s" % self.planning_frame)
 
-        # self.eef_link = self.manipulator.get_end_effector_link()
-        # print("============ End effector link: %s" % self.eef_link)
+        self.eef_link = self.manipulator.get_end_effector_link()
+        print("============ End effector link: %s" % self.eef_link)
 
-        # self.group_names = self.robot.get_group_names()
-        # print("============ Available Planning Groups:", self.robot.get_group_names())
+        self.group_names = self.robot.get_group_names()
+        print("============ Available Planning Groups:", self.robot.get_group_names())
 
-        # print("============ Printing robot state")
-        # print(self.robot.get_current_state())
-        # print("")
+        print("============ Printing robot state")
+        print(self.robot.get_current_state())
+        print("")
 
-        self.move_to_standby()
+        # self.move_to_standby()
 
         rospy.sleep(1)
 
     def move_to_standby(self):
         self.manipulator.set_named_target("stand_by")
+        # self.go_to_joint_state([-tau/4, -tau/4, -tau/4, -tau/4, tau/4, 0.0])
+
         self.manipulator.go(wait=True)
         self.manipulator.stop()
+        print("============ Printing robot state")
+        print(self.robot.get_current_state())
         
     def gripper_init(self):
         self.gripper.fun=1

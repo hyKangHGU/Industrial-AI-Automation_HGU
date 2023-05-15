@@ -8,11 +8,11 @@ from math import tau
 from move_group_python_interface import MoveGroupPythonInterface
 from ur_python.msg import object_info, robot_state
 
-class Ur5e_Move_With_Camera():
+class UR5e_Move_With_Camera():
     def __init__(self):
-        self.ur5e = MoveGroupPythonInterface()
+        self.ur5e = MoveGroupPythonInterface(real="sim")
 
-        init_pose_joints = [0, 0, tau/4, 0, tau/4, 0]          # tau = 2 * pi
+        init_pose_joints = [-tau/4, -tau/4, -tau/4, -tau/4, tau/4, 0.0]          # tau = 2 * pi
         self.ur5e.go_to_joint_state(init_pose_joints)
         self.msg_object_info = object_info()
         # self.msg_robot_state = robot_state()
@@ -35,7 +35,7 @@ class Ur5e_Move_With_Camera():
         while not rospy.is_shutdown():                  # ROS가 종료되지 않은 동안
             if self.flag_recv_msg:
                 print(f"message received: {self.cmd_x:.2f}, {self.cmd_y:.2f}")
-                target_pose_abs_xyz = [self.cmd_x, self.cmd_y, 0.54]
+                target_pose_abs_xyz = [self.cmd_x, self.cmd_y, 0.28]
 
                 current_pose = self.ur5e.manipulator.get_current_pose().pose
                 current_quat = [current_pose.orientation.x, current_pose.orientation.y, current_pose.orientation.z, current_pose.orientation.w]
@@ -53,8 +53,8 @@ class Ur5e_Move_With_Camera():
 def main():
     try:
         
-        Indy10 = Indy10_Move_With_Camera()
-        Indy10.run()
+        UR5e = UR5e_Move_With_Camera()
+        UR5e.run()
 
     except rospy.ROSInterruptException:
         return

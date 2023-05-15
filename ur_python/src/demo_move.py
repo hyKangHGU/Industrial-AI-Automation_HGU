@@ -8,21 +8,24 @@ from math import tau
 def main():
     try:
 
-        ur5e = MoveGroupPythonInterface()
+        ur5e = MoveGroupPythonInterface(real="sim")
+
+        # input("============ Press `Enter` to execute a movement using a joint state goal ...")
+        # ur5e.move_to_standby()
 
         input("============ Press `Enter` to execute a movement using a joint state goal ...")
-        target_joints = [0, 0, tau/4, 0, tau/4, 0]          # tau = 2 * pi
+        target_joints = [-tau/4, -tau/4, -tau/4, -tau/4, tau/4, 0.0]          # tau = 2 * pi
         ur5e.go_to_joint_state(target_joints)
 
         input("============ Press `Enter` to execute a movement using a relative pose ...")
-        target_pose_rel_xyz = [0.3, -0.1, 0.1]
+        target_pose_rel_xyz = [-.2, -0.1, 0.0]
         target_pose_rel_rpy = [0, 0, 0]
         ur5e.go_to_pose_rel(target_pose_rel_xyz, target_pose_rel_rpy)
 
-        input("============ Press `Enter` to execute a movement using a absolute pose ...")
-        target_pose_abs_xyz = [0.0, 0.52, 0.54]
-        target_pose_abs_rpy = [0, 0, 0]
-        ur5e.go_to_pose_abs(target_pose_abs_xyz, target_pose_abs_rpy)
+        # input("============ Press `Enter` to execute a movement using a absolute pose ...")
+        # target_pose_abs_xyz = [0.0, 0.52, 0.54]
+        # target_pose_abs_rpy = [0, 0, 0]
+        # ur5e.go_to_pose_abs(target_pose_abs_xyz, target_pose_abs_rpy)
 
 
         print("============ Python tutorial demo complete!")

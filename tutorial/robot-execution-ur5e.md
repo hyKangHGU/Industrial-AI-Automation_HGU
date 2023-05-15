@@ -61,7 +61,7 @@
 ```bash
 roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 roslaunch ur5e_rg2_moveit_config move_group.launch
-rosrun indy_driver demo_move.py
+rosrun ur_python demo_move.py
 ```
 
 
@@ -71,7 +71,7 @@ rosrun indy_driver demo_move.py
 ```bash
 roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 roslaunch ur5e_rg2_moveit_config move_group.launch
-rosrun indy_driver demo_grip.py
+rosrun ur_python demo_grip.py
 ```
 
 
@@ -81,7 +81,7 @@ rosrun indy_driver demo_grip.py
 ```bash
 roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 roslaunch ur5e_rg2_moveit_config move_group.launch
-rosrun indy_driver demo_pick_and_place.py
+rosrun ur_python demo_pick_and_place.py
 ```
 
 
@@ -91,7 +91,7 @@ rosrun indy_driver demo_pick_and_place.py
 ```bash
 roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.2
 roslaunch ur5e_rg2_moveit_config move_group.launch
-rosrun indy_driver camera.py
-rosrun indy_driver demo_move_with_camera.py
-rosrun indy_driver image_processing.py
+rosrun ur_python camera.py
+rosrun ur_python demo_move_with_camera.py
+rosrun ur_python image_processing.py
 ```
