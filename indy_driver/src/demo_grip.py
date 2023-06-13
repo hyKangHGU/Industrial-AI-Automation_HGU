@@ -11,7 +11,7 @@ def main():
 
         input("============ Press `Enter` to execute a movement using a joint state goal ...")
         target_joints = [0, 0, tau/4, 0, tau/4, 0]          # tau = 2 * pi
-        indy10_interface.go_to_joint_state(target_joints)
+        indy10_interface.go_to_joint_abs(target_joints)
 
         input("============ Press `Enter` to grip on ...")
         indy10_interface.grip_on()

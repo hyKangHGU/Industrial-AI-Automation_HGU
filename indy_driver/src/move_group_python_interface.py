@@ -85,8 +85,6 @@ class MoveGroupPythonInterface(object):
         print(self.robot.get_current_state())
         print("")
 
-        self.box_name = ""
-
         if real == True:
             self.gripper_init(gripper)
 
@@ -129,7 +127,7 @@ class MoveGroupPythonInterface(object):
         self.msg_grip_state.change = 0
         self.msg_grip_state.on = data.on
 
-    def go_to_joint_state(self, target_joints):
+    def go_to_joint_abs(self, target_joints):
         current_joint = self.manipulator.get_current_joint_values()
         target_joint = copy.deepcopy(current_joint)
         target_joint[0] = target_joints[0]
@@ -138,6 +136,28 @@ class MoveGroupPythonInterface(object):
         target_joint[3] = target_joints[3]
         target_joint[4] = target_joints[4]
         target_joint[5] = target_joints[5]
+
+        self.msg_robot_state.move = 1
+        self.pub_robot_state.publish(self.msg_robot_state)
+        
+        self.manipulator.go(target_joint, wait=True)
+        self.manipulator.stop()
+        current_joint = self.manipulator.get_current_joint_values()
+
+        self.msg_robot_state.move = 0
+        self.pub_robot_state.publish(self.msg_robot_state)
+
+        return all_close(target_joint, current_joint, 0.01)
+
+    def go_to_joint_rel(self, relative_pos):
+        current_joint = self.manipulator.get_current_joint_values()
+        target_joint = copy.deepcopy(current_joint)
+        target_joint[0] = target_joint[0] + relative_pos[0]
+        target_joint[1] = target_joint[1] + relative_pos[1]
+        target_joint[2] = target_joint[2] + relative_pos[2]
+        target_joint[3] = target_joint[3] + relative_pos[3]
+        target_joint[4] = target_joint[4] + relative_pos[4]
+        target_joint[5] = target_joint[5] + relative_pos[5]
 
         self.msg_robot_state.move = 1
         self.pub_robot_state.publish(self.msg_robot_state)
